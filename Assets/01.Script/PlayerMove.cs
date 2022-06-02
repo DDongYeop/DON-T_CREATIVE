@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-    
+    Movement movement;
+
+    private void Awake()
+    {
+        movement = GetComponent<Movement>();
+    }
 
     private void Update()
     {
-        
-    }
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
 
-    private void PlayerMovment()
-    {
+        movement.MoveTo(new Vector3(x, y, 0));
     }
 }
