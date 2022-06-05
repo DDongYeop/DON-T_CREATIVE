@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    Movement movement;
+    private Movement _movement;
 
     private void Awake()
     {
-        movement = GetComponent<Movement>();
+        _movement = GetComponent<Movement>();
     }
 
     private void Update()
     {
+
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        movement.MoveTo(new Vector3(x, y, 0));
+        _movement.MoveTo(new Vector3(x, y, 0));
     }
 }

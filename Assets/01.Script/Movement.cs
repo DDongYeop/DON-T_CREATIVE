@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
-    [SerializeField] Vector3 moveDirection = Vector3.zero;
+    [SerializeField] private float _moveSpeed;
+    [SerializeField] private Vector3 _moveDirection = Vector3.zero;
 
     private void Update()
     {
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
+        transform.position += _moveDirection * _moveSpeed * Time.deltaTime;
     }
 
     public void MoveTo(Vector3 direction)
     {
-        moveDirection = direction;
+        _moveDirection = direction;
     }
 }
