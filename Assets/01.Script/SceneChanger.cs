@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    [SerializeField] private int SceneNumber;
+
     public void Exit()
     {
         Application.Quit();
-        Debug.Log("디버그 나왔당");
+        Debug.Log("GAME EXIT");
     }
 
     public void PlayerScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneNumber);
     }
 }
