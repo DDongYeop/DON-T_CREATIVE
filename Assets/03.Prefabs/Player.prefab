@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45b7db0002f75d4899ed63d5f5013e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
 --- !u!114 &4471758594953673385
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,9 +56,10 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\01.Script\SceneChanger.cs" />
-    <Compile Include="Assets\01.Script\PlayerController.cs" />
     <Compile Include="Assets\01.Script\Movement.cs" />
+    <Compile Include="Assets\01.Script\PlayerController.cs" />
+    <Compile Include="Assets\01.Script\SceneChanger.cs" />
+    <Compile Include="Assets\01.Script\StageData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
