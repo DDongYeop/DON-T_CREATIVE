@@ -65,6 +65,7 @@
     <Compile Include="Assets\01.Script\PositionAutoDestroyer.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerFire.cs" />
     <Compile Include="Assets\01.Script\Enemy\Test.cs" />
+    <Compile Include="Assets\01.Script\PositionSwitch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
