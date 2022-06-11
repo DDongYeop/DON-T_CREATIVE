@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
             _playerFire.StartPlayerAttack();
+        else if (Input.GetKeyUp(KeyCode.Space))
+            _playerFire.StopPlayerAttack();
     }
 
     private void LateUpdate()

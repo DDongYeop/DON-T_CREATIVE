@@ -59,6 +59,7 @@
     <Compile Include="Assets\01.Script\Movement.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerController.cs" />
     <Compile Include="Assets\01.Script\SceneChanger.cs" />
+    <Compile Include="Assets\01.Script\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\01.Script\StageData.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerFire.cs" />
   </ItemGroup>
