@@ -565,8 +565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
-  _enemy: {fileID: 5549102469955365548, guid: 46a5a65379464f64fa03b49f140b0801, type: 3}
-  _spawnTime: 0.35
+  _enemy: {fileID: 9209063063776139681, guid: 4472e7a817596ce44a9ef0b9f9e9dd92, type: 3}
+  _spawnTime: 0.33333334
 --- !u!4 &2110260908
 Transform:
   m_ObjectHideFlags: 0
