@@ -63,6 +63,7 @@
     <Compile Include="Assets\01.Script\StageData.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerFire.cs" />
     <Compile Include="Assets\01.Script\Enemy\Test.cs" />
+    <Compile Include="Assets\01.Script\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
