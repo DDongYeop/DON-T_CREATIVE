@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: -1115786302271109615}
   - component: {fileID: 967116357538100861}
   - component: {fileID: 5709344844762013377}
-  - component: {fileID: -6999013280490855603}
   - component: {fileID: -6824712351215860400}
+  - component: {fileID: 1171153401386407432}
   m_Layer: 0
   m_Name: Enemy_Meteor
   m_TagString: Enemy
@@ -158,18 +158,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-6999013280490855603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9209063063776139681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab41a9972614a714e9f1d61da2a6316e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-6824712351215860400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +171,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
+--- !u!114 &1171153401386407432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209063063776139681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2efd62d15b42548438769d1983e462c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
