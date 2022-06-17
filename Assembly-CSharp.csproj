@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\01.Script\Movement.cs" />
+    <Compile Include="Assets\01.Script\Player\PlayerHPViewer.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerController.cs" />
     <Compile Include="Assets\01.Script\UI\PauseMenu.cs" />
     <Compile Include="Assets\01.Script\SceneChanger.cs" />
@@ -67,7 +68,6 @@
     <Compile Include="Assets\01.Script\Player\PlayerFire.cs" />
     <Compile Include="Assets\01.Script\PositionSwitch.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerHP.cs" />
-    <Compile Include="Assets\01.Script\Player\PlayerHPViewer.cs" />
     <Compile Include="Assets\01.Script\Enemy\Meteor.cs" />
   </ItemGroup>
   <ItemGroup>
