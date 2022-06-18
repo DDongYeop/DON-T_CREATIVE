@@ -7,13 +7,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private StageData stageData;
 
     private PlayerFire _playerFire;
-
-    Movement movement;
+    private Movement _movement;
 
 
     private void Awake()
     {
-        movement = GetComponent<Movement>();
+        _movement = GetComponent<Movement>();
         _playerFire = GetComponent<PlayerFire>();
     }
 
@@ -22,7 +21,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        movement.MoveTo(new Vector3(x, y, 0));
+        _movement.MoveTo(new Vector3(x, y, 0));
 
         if (Input.GetKeyDown(KeyCode.Space))
             _playerFire.StartPlayerAttack();

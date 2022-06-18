@@ -61,7 +61,7 @@
     <Compile Include="Assets\01.Script\Player\PlayerController.cs" />
     <Compile Include="Assets\01.Script\UI\PauseMenu.cs" />
     <Compile Include="Assets\01.Script\SceneChanger.cs" />
-    <Compile Include="Assets\01.Script\Timer.cs" />
+    <Compile Include="Assets\01.Script\UI\Timer.cs" />
     <Compile Include="Assets\01.Script\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\01.Script\StageData.cs" />
     <Compile Include="Assets\01.Script\PositionAutoDestroyer.cs" />
@@ -69,6 +69,8 @@
     <Compile Include="Assets\01.Script\PositionSwitch.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerHP.cs" />
     <Compile Include="Assets\01.Script\Enemy\Meteor.cs" />
+    <Compile Include="Assets\01.Script\UI\PlayerScoreViewer.cs" />
+    <Compile Include="Assets\01.Script\Player\PlayerBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
