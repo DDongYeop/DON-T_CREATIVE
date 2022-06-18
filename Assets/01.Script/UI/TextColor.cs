@@ -47,11 +47,11 @@ public class TextColor : MonoBehaviour
 
     private void TimeScale()
     {
-        if (_realTime <= 10)
+        if (_realTime <= 60)
         {
             _textWarning.color = Color.clear;
         }
-        else if (_realTime <= 17)
+        else if (_realTime <= 67)
         {
             StartCoroutine(ColorLerpLoop());
         }
