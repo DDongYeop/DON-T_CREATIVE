@@ -11,5 +11,10 @@ public class PlayerBullet : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
+
+        if (collision.CompareTag("Boss"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
