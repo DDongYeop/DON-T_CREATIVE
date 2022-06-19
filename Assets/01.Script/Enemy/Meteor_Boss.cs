@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Meteor_Boss : MonoBehaviour
 {
+    [SerializeField] private Vector3 _moveDirection = Vector3.down;
 
     private Movement _movement;
     private float _realTime;
@@ -13,46 +14,24 @@ public class Meteor_Boss : MonoBehaviour
         _movement = GetComponent<Movement>();
     }
 
-    private void Start()
-    {
-        StartCoroutine(Stage1Boss());
-    }
-
     private void Update()
     {
         _realTime += Time.deltaTime;
-    }
 
-    
-
-    IEnumerator Stage1Boss()
-    {
-        while (true)
-        {
-            if (_realTime <= 6.5 && _realTime >= 9.5)
-            {
-                print(_realTime);
-                StartBossMove();
-            }
-            yield return null; 
-        }
-    }
-
-
-    private void StartBossMove()
-    {
-        if (_realTime <= 7.5 && _realTime >= 9.5)
+        if (_realTime >= 6.5 && _realTime <= 8)
             StartCoroutine(MoveToAppearPoint());
+        else 
+            StopCoroutine(MoveToAppearPoint());
     }
 
     IEnumerator MoveToAppearPoint()
     {
-        _movement.MoveTo(Vector3.down);
+        transform.position += _moveDirection * 5 * Time.deltaTime;
 
         while (true)
         {
-            if (transform.position.y <= 3)
-                _movement.MoveTo(Vector3.zero);
+            if (transform.position.y <= 2.5f)
+                _moveDirection = Vector3.zero;
             yield return null;
         }
     }
