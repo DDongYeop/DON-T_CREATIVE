@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\01.Script\Movement.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Meteor_Boss.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerHPViewer.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerController.cs" />
     <Compile Include="Assets\01.Script\UI\PauseMenu.cs" />
@@ -72,7 +73,6 @@
     <Compile Include="Assets\01.Script\PositionSwitch.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerHP.cs" />
     <Compile Include="Assets\01.Script\Enemy\Meteor.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Meteor_Boss.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
