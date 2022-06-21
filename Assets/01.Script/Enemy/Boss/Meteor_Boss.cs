@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum MeteorBoss { MoveToAppearPoint = 0, Phase01 }
+
 public class Meteor_Boss : MonoBehaviour
 {
     [SerializeField] private GameObject _bossBullet;
@@ -15,32 +17,47 @@ public class Meteor_Boss : MonoBehaviour
     private void Start()
     {
         _currentHP = _maxHP;
+        StartCoroutine(MoveToAppearPoint());
     }
 
     private void Update()
     {
         _realTime += Time.deltaTime;
 
-        if (_realTime >= 6.5 && _realTime <= 9)
+        /*if (_realTime >= 6.5 && _realTime <= 9)
             StartCoroutine(MoveToAppearPoint());
         else 
-            StopCoroutine(MoveToAppearPoint());
+            StopCoroutine(MoveToAppearPoint());*/
 
         if (_currentHP <= 0)
             MeteorBossDie();
 
-        if (_realTime >= 71 && _realTime <= 73)
-            StartCoroutine(BossPettern1());
+        /*if (_realTime >= 11 && _realTime <= 11.1f)
+            StartCoroutine(BossPettern1());*/
+
+        if (_realTime > 11)
+            StopCoroutine(MoveToAppearPoint());
     }
 
     IEnumerator MoveToAppearPoint()
     {
-        transform.position += _moveDirection * 5 * Time.deltaTime;
+        yield return new WaitForSeconds(6.5f);
+     
 
         while (true)
         {
+            transform.position += _moveDirection * 5 * Time.deltaTime;
+
             if (transform.position.y <= 2.5f)
+            {
                 _moveDirection = Vector3.zero;
+            }
+
+            if (_realTime >= 11)
+            {
+                StartCoroutine(BossPettern1());
+                break;
+            }
             yield return null;
         }
     }
@@ -63,7 +80,7 @@ public class Meteor_Boss : MonoBehaviour
 
     IEnumerator BossPettern1()
     {
-        float attRate = 0.5f;
+        float attRate = 3f;
         int count = 30;
         float intercalAngle = 360 / count;
         float weightAngle = 0;
