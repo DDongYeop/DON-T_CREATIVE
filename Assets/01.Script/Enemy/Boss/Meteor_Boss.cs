@@ -13,6 +13,7 @@ public class Meteor_Boss : MonoBehaviour
 
     private float _realTime;
     private float _currentHP;
+    private bool _BossDie = true;
 
     private void Start()
     {
@@ -29,14 +30,18 @@ public class Meteor_Boss : MonoBehaviour
         else 
             StopCoroutine(MoveToAppearPoint());*/
 
-        if (_currentHP <= 0)
-            MeteorBossDie();
-
         /*if (_realTime >= 11 && _realTime <= 11.1f)
             StartCoroutine(BossPettern1());*/
 
         if (_realTime > 11)
             StopCoroutine(MoveToAppearPoint());
+
+        if (_currentHP == 0 && _BossDie == true)
+        {
+            StopAllCoroutines();
+            StartCoroutine(Meteor_Boss_Die());
+            _BossDie = false;
+        }
     }
 
     IEnumerator MoveToAppearPoint()
@@ -73,25 +78,24 @@ public class Meteor_Boss : MonoBehaviour
         _currentHP -= damage;
     }
 
-    private void MeteorBossDie()
-    {
-        Destroy(gameObject);
-    }
+#region Phase1 ÇÔ¼öµé
+    private float _attRate = 3f;
+    private int _count = 20;
+    private float _intercalAngle;
+    private float _weightAngle = 0;
+#endregion
 
     IEnumerator BossPettern1()
     {
-        float attRate = 3f;
-        int count = 20;
-        float intercalAngle = 360 / count;
-        float weightAngle = 0;
+        _intercalAngle = 360 / _count;
 
         while (true)
         {
-            for (int i = 0; i < count; ++i)
+            for (int i = 0; i < _count; ++i)
             {
                 GameObject clone = Instantiate(_bossBullet, transform.position, Quaternion.identity);
 
-                float angle = weightAngle + intercalAngle * i;
+                float angle = _weightAngle + _intercalAngle * i;
 
                 float x = Mathf.Cos(angle * Mathf.PI / 180.0f);
                 float y = Mathf.Sin(angle * Mathf.PI / 180.0f);
@@ -102,8 +106,49 @@ public class Meteor_Boss : MonoBehaviour
                 clone.GetComponent<Movement>().MoveTo(dir);
             }
 
-            weightAngle += 1;
-            yield return new WaitForSeconds(attRate);
+            _weightAngle += 1;
+            yield return new WaitForSeconds(_attRate);
         }
+    }
+
+    IEnumerator Meteor_Boss_Die()
+    {
+        while (true)
+        {
+            Meteor_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            Meteor_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            Meteor_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            BossDestroy();
+            break;
+        }
+    }
+
+    void Meteor_Boss_Phase1()
+    {
+        for (int i = 0; i < _count; ++i)
+        {
+            GameObject clone = Instantiate(_bossBullet, transform.position, Quaternion.identity);
+
+            float angle = _weightAngle + _intercalAngle * i;
+
+            float x = Mathf.Cos(angle * Mathf.PI / 180.0f);
+            float y = Mathf.Sin(angle * Mathf.PI / 180.0f);
+
+            Vector3 dir = new Vector3(x, y, 0);
+            transform.position += dir * 5 * Time.deltaTime;
+
+            clone.GetComponent<Movement>().MoveTo(dir);
+        }
+
+        _weightAngle += 1;
+    }
+
+    void BossDestroy()
+    {
+        Destroy(gameObject);
+        StopAllCoroutines();
     }
 }
