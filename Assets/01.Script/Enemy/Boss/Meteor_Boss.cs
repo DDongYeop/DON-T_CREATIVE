@@ -81,7 +81,7 @@ public class Meteor_Boss : MonoBehaviour
     IEnumerator BossPettern1()
     {
         float attRate = 3f;
-        int count = 30;
+        int count = 20;
         float intercalAngle = 360 / count;
         float weightAngle = 0;
 
@@ -98,6 +98,8 @@ public class Meteor_Boss : MonoBehaviour
 
                 Vector3 dir = new Vector3(x, y, 0);
                 transform.position += dir * 5 * Time.deltaTime;
+
+                clone.GetComponent<Movement>().MoveTo(dir);
             }
 
             weightAngle += 1;

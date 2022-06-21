@@ -145,10 +145,10 @@ TextureImporter:
       name: 2022.06.20 - Small_Meteor-Sheet_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 1
-        width: 30
-        height: 30
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: 2022.06.20 - Small_Meteor-Sheet_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 1
-        width: 30
-        height: 30
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,9 +187,9 @@ TextureImporter:
       name: 2022.06.20 - Small_Meteor-Sheet_3
       rect:
         serializedVersion: 2
-        x: 98
-        y: 1
-        width: 29
+        x: 96
+        y: 2
+        width: 31
         height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -208,10 +208,10 @@ TextureImporter:
       name: 2022.06.20 - Small_Meteor-Sheet_4
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 1
-        width: 30
-        height: 30
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,10 +229,10 @@ TextureImporter:
       name: 2022.06.20 - Small_Meteor-Sheet_5
       rect:
         serializedVersion: 2
-        x: 161
-        y: 1
+        x: 160
+        y: 0
         width: 30
-        height: 30
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
