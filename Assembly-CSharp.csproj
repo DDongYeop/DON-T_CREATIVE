@@ -73,6 +73,7 @@
     <Compile Include="Assets\01.Script\PositionSwitch.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerHP.cs" />
     <Compile Include="Assets\01.Script\Enemy\Meteor.cs" />
+    <Compile Include="Assets\01.Script\UI\ChooseESC.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -540,8 +540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917893958f119f844a625445e1adfb7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bossBullet: {fileID: 614369363732303872, guid: 3003123b4643125468dd545ef03b24cd, type: 3}
   _moveDirection: {x: 0, y: -1, z: 0}
   _damage: 1
+  _maxHP: 200
 --- !u!50 &571927692
 Rigidbody2D:
   serializedVersion: 4

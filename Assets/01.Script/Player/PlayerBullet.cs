@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
+    [SerializeField] private int _damage = 1;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
@@ -15,6 +17,7 @@ public class PlayerBullet : MonoBehaviour
         if (collision.CompareTag("Boss"))
         {
             Destroy(gameObject);
+            collision.GetComponent<Meteor_Boss>().Meteor_BossDamge(_damage);
         }
     }
 }
