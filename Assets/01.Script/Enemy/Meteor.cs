@@ -5,8 +5,7 @@ using UnityEngine;
 public class Meteor : MonoBehaviour
 {
     [SerializeField] private float _damage = 1;
-
-     private int _score = 100;
+    [SerializeField] private int _score = 100;
 
 
     private void OnTriggerEnter2D(Collider2D collision)

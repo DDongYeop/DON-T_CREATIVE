@@ -543,7 +543,7 @@ MonoBehaviour:
   _bossBullet: {fileID: 614369363732303872, guid: 3003123b4643125468dd545ef03b24cd, type: 3}
   _moveDirection: {x: 0, y: -1, z: 0}
   _damage: 1
-  _maxHP: 200
+  _maxHP: 150
 --- !u!50 &571927692
 Rigidbody2D:
   serializedVersion: 4
