@@ -544,6 +544,7 @@ MonoBehaviour:
   _moveDirection: {x: 0, y: -1, z: 0}
   _damage: 1
   _maxHP: 150
+  _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
 --- !u!50 &571927692
 Rigidbody2D:
   serializedVersion: 4

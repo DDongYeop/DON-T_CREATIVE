@@ -10,10 +10,12 @@ public class Meteor_Boss : MonoBehaviour
     [SerializeField] private Vector3 _moveDirection = Vector3.down;
     [SerializeField] private int _damage = 2;
     [SerializeField] private float _maxHP = 200f;
+    [SerializeField] private StageData _stageData;
 
     private float _realTime;
     private float _currentHP;
-    private bool _BossDie = true;
+    private bool _bossDie = true;
+    private bool _bossPhase2 = true;
 
     private void Start()
     {
@@ -36,11 +38,17 @@ public class Meteor_Boss : MonoBehaviour
         if (_realTime > 11)
             StopCoroutine(MoveToAppearPoint());
 
-        if (_currentHP == 0 && _BossDie == true)
+        if (_currentHP == 0 && _bossDie == true)
         {
             StopAllCoroutines();
             StartCoroutine(Meteor_Boss_Die());
-            _BossDie = false;
+            _bossDie = false;
+        }
+
+        if (_currentHP <= _maxHP * 0.5f && _bossPhase2 == true)
+        {
+            StartCoroutine(BackAndForth());
+            _bossPhase2 = false;
         }
     }
 
@@ -150,5 +158,23 @@ public class Meteor_Boss : MonoBehaviour
     {
         Destroy(gameObject);
         StopAllCoroutines();
+    }
+
+    IEnumerator BackAndForth()
+    {
+        Vector3 _dir = Vector3.right;
+        print(1);
+
+        while (true)
+        {
+            transform.position += _dir * 4 * Time.deltaTime;
+            if (transform.position.x <= _stageData.LimitMin.x + 1.4f || transform.position.x >= _stageData.LimitMax.x - 1.4f)
+            {
+                print(2);
+                _dir *= -1;
+                transform.position += _dir * 4 * Time.deltaTime;
+            }
+            yield return null;
+        }
     }
 }
