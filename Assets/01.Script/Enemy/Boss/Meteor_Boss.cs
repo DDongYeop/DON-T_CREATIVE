@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum MeteorBoss { MoveToAppearPoint = 0, Phase01 }
 
@@ -109,7 +110,7 @@ public class Meteor_Boss : MonoBehaviour
                 float y = Mathf.Sin(angle * Mathf.PI / 180.0f);
 
                 Vector3 dir = new Vector3(x, y, 0);
-                transform.position += dir * 5 * Time.deltaTime;
+                transform.position += dir * 7 * Time.deltaTime;
 
                 clone.GetComponent<Movement>().MoveTo(dir);
             }
@@ -129,12 +130,18 @@ public class Meteor_Boss : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             Meteor_Boss_Phase1();
             yield return new WaitForSeconds(0.2f);
-            BossDestroy();
+            Meteor_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            Meteor_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            gameObject.GetComponent<Renderer>().material.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0 / 255f);
+            yield return new WaitForSeconds(0.5f);
+            SceneManager.LoadScene(7);
             break;
         }
     }
 
-    void Meteor_Boss_Phase1()
+    private void Meteor_Boss_Phase1()
     {
         for (int i = 0; i < _count; ++i)
         {
@@ -146,7 +153,7 @@ public class Meteor_Boss : MonoBehaviour
             float y = Mathf.Sin(angle * Mathf.PI / 180.0f);
 
             Vector3 dir = new Vector3(x, y, 0);
-            transform.position += dir * 5 * Time.deltaTime;
+            transform.position += dir * 7 * Time.deltaTime;
 
             clone.GetComponent<Movement>().MoveTo(dir);
         }
@@ -154,7 +161,7 @@ public class Meteor_Boss : MonoBehaviour
         _weightAngle += 1;
     }
 
-    void BossDestroy()
+    private void BossDestroy()
     {
         Destroy(gameObject);
         StopAllCoroutines();
@@ -163,14 +170,12 @@ public class Meteor_Boss : MonoBehaviour
     IEnumerator BackAndForth()
     {
         Vector3 _dir = Vector3.right;
-        print(1);
 
         while (true)
         {
             transform.position += _dir * 4 * Time.deltaTime;
             if (transform.position.x <= _stageData.LimitMin.x + 1.4f || transform.position.x >= _stageData.LimitMax.x - 1.4f)
             {
-                print(2);
                 _dir *= -1;
                 transform.position += _dir * 4 * Time.deltaTime;
             }

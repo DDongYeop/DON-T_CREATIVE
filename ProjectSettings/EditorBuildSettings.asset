@@ -12,18 +12,48 @@ EditorBuildSettings:
     path: Assets/00.Scenes/ChooseScene.unity
     guid: 1892cadefc8e8a14786ede9b9d7a2e3b
   - enabled: 1
-    path: Assets/00.Scenes/Stage1.unity
+    path: Assets/00.Scenes/Stage/Stage1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/00.Scenes/Stage2.unity
+    path: Assets/00.Scenes/Stage/Stage2.unity
     guid: 8879a67814a32f04e803924dfa0f22f5
   - enabled: 1
-    path: Assets/00.Scenes/Stage3.unity
+    path: Assets/00.Scenes/Stage/Stage3.unity
     guid: 921bfd5d392360b4ea7acc34def1d959
   - enabled: 1
-    path: Assets/00.Scenes/Stage4.unity
+    path: Assets/00.Scenes/Stage/Stage4.unity
     guid: deeaeb10b0b6a664d926377d20ca3896
   - enabled: 1
-    path: Assets/00.Scenes/Stage5.unity
+    path: Assets/00.Scenes/Stage/Stage5.unity
     guid: 1fef984b1efe1504587f75216e693d41
+  - enabled: 1
+    path: Assets/00.Scenes/Clear/Stage1Clear.unity
+    guid: ebe5e6170d06ee947b88dc0d4f69970d
+  - enabled: 1
+    path: Assets/00.Scenes/Clear/Stage2Clear.unity
+    guid: 40f088f097f5e704e91daf3634ea1ad8
+  - enabled: 1
+    path: Assets/00.Scenes/Clear/Stage3Clear.unity
+    guid: f5bf8442a65d9e647af66b655891f90b
+  - enabled: 1
+    path: Assets/00.Scenes/Clear/Stage4Clear.unity
+    guid: e545c0d8e1e64fd48b770b72b34be832
+  - enabled: 1
+    path: Assets/00.Scenes/Clear/Stage5Clear.unity
+    guid: 5c1ac6c53fff6434bb9ffda91228b9e3
+  - enabled: 1
+    path: Assets/00.Scenes/GameOver/Stage1GameOver.unity
+    guid: dd859602bf36dfb49ab550dad952a6a5
+  - enabled: 1
+    path: Assets/00.Scenes/GameOver/Stage2GameOver.unity
+    guid: 3ee29451b16673e47b7b86f2b9329db2
+  - enabled: 1
+    path: Assets/00.Scenes/GameOver/Stage3GameOver.unity
+    guid: cd88358828b2a1d41979bf32291dd8bc
+  - enabled: 1
+    path: Assets/00.Scenes/GameOver/Stage4GameOver.unity
+    guid: 3c750dcde150a0145a8b5371e8346ec1
+  - enabled: 1
+    path: Assets/00.Scenes/GameOver/Stage5GameOver.unity
+    guid: d445b2d3f6dda8141940bdd3b8fd51d9
   m_configObjects: {}
