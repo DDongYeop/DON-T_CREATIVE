@@ -17,11 +17,11 @@ public class Meteor_Boss : MonoBehaviour
     private float _currentHP;
     private bool _bossDie = true;
     private bool _bossPhase2 = true;
+    private bool _start = true;
 
     private void Start()
     {
         _currentHP = _maxHP;
-        StartCoroutine(MoveToAppearPoint());
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class Meteor_Boss : MonoBehaviour
         /*if (_realTime >= 11 && _realTime <= 11.1f)
             StartCoroutine(BossPettern1());*/
 
-        if (_realTime > 11)
+        if (_realTime > 71)
             StopCoroutine(MoveToAppearPoint());
 
         if (_currentHP == 0 && _bossDie == true)
@@ -51,15 +51,19 @@ public class Meteor_Boss : MonoBehaviour
             StartCoroutine(BackAndForth());
             _bossPhase2 = false;
         }
+
+        if (_realTime >= 66 && _start == true)
+        {
+            StartCoroutine(MoveToAppearPoint());
+            _start = false;
+        }
     }
 
     IEnumerator MoveToAppearPoint()
     {
-        yield return new WaitForSeconds(6.5f);
-     
-
         while (true)
         {
+            print(1);
             transform.position += _moveDirection * 5 * Time.deltaTime;
 
             if (transform.position.y <= 2.5f)
@@ -67,7 +71,7 @@ public class Meteor_Boss : MonoBehaviour
                 _moveDirection = Vector3.zero;
             }
 
-            if (_realTime >= 11)
+            if (_realTime >= 71)
             {
                 StartCoroutine(BossPettern1());
                 break;
@@ -135,7 +139,7 @@ public class Meteor_Boss : MonoBehaviour
             Meteor_Boss_Phase1();
             yield return new WaitForSeconds(0.2f);
             gameObject.GetComponent<Renderer>().material.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0 / 255f);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(5f);
             SceneManager.LoadScene(7);
             break;
         }
@@ -159,12 +163,6 @@ public class Meteor_Boss : MonoBehaviour
         }
 
         _weightAngle += 1;
-    }
-
-    private void BossDestroy()
-    {
-        Destroy(gameObject);
-        StopAllCoroutines();
     }
 
     IEnumerator BackAndForth()
