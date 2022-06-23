@@ -1142,7 +1142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
   _enemy: {fileID: 4205276445713965739, guid: cdb55b83cdeb78148ab2ef110cfbe557, type: 3}
-  _spawnTime: 1.5
+  _spawnTime: 3
 --- !u!114 &2043876366
 MonoBehaviour:
   m_ObjectHideFlags: 0
