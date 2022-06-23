@@ -63,7 +63,6 @@ public class Meteor_Boss : MonoBehaviour
     {
         while (true)
         {
-            print(1);
             transform.position += _moveDirection * 5 * Time.deltaTime;
 
             if (transform.position.y <= 2.5f)
