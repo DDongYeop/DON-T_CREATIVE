@@ -28,14 +28,6 @@ public class Meteor_Boss : MonoBehaviour
     {
         _realTime += Time.deltaTime;
 
-        /*if (_realTime >= 6.5 && _realTime <= 9)
-            StartCoroutine(MoveToAppearPoint());
-        else 
-            StopCoroutine(MoveToAppearPoint());*/
-
-        /*if (_realTime >= 11 && _realTime <= 11.1f)
-            StartCoroutine(BossPettern1());*/
-
         if (_realTime > 71)
             StopCoroutine(MoveToAppearPoint());
 

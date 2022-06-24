@@ -490,8 +490,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e43870926de35948a54b7cc59100883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bossBullet: {fileID: 0}
   _damage: 2
-  _maxHP: 200
+  _maxHP: 300
   _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
 --- !u!224 &484852843 stripped
 RectTransform:

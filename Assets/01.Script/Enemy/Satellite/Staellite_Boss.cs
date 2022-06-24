@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Staellite_Boss : MonoBehaviour
 {
+    [SerializeField] private GameObject _bossBullet;
     [SerializeField] private int _damage = 2;
     [SerializeField] private float _maxHP = 200f;
     [SerializeField] private StageData _stageData;
@@ -45,10 +46,61 @@ public class Staellite_Boss : MonoBehaviour
 
             if (_realTime >= 71)
             {
-                //StartCoroutine(BossPettern1());
+                StartCoroutine(BossPettern1());
                 break;
             }
             yield return null;
         }
+    }
+
+    IEnumerator BossPettern1()
+    {
+        _intercalAngle = 360 / _count;
+
+        while (true)
+        {
+            Staellite_Boss_Phase1();
+            yield return new WaitForSeconds(_attRate);
+        }
+    }
+
+
+    #region Phase1 ÇÔ¼öµé
+    private float _attRate = 2.5f;
+    private int _count = 25;
+    private float _intercalAngle;
+    private float _weightAngle = 0;
+    #endregion
+
+    private void Staellite_Boss_Phase1()
+    {
+        for (int i = 0; i < _count; ++i)
+        {
+            GameObject clone = Instantiate(_bossBullet, transform.position, Quaternion.identity);
+
+            float angle = _weightAngle + _intercalAngle * i;
+
+            float x = Mathf.Cos(angle * Mathf.PI / 180.0f);
+            float y = Mathf.Sin(angle * Mathf.PI / 180.0f);
+
+            Vector3 dir = new Vector3(x, y, 0);
+            transform.position += dir * 7 * Time.deltaTime;
+
+            clone.GetComponent<Movement>().MoveTo(dir);
+        }
+
+        _weightAngle += 1;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+            collision.GetComponent<PlayerHP>().TakeDamge(_damage);
+    }
+
+    public void Staellite_BossDamge(int damage)
+    {
+        _currentHP -= damage;
     }
 }

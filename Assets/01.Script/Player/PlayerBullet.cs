@@ -18,6 +18,7 @@ public class PlayerBullet : MonoBehaviour
         {
             Destroy(gameObject);
             collision.GetComponent<Meteor_Boss>().Meteor_BossDamge(_damage);
+            collision.GetComponent<Staellite_Boss>().Staellite_BossDamge(_damage);
         }
     }
 }
