@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Staellite_Boss : MonoBehaviour
 {
@@ -9,12 +10,24 @@ public class Staellite_Boss : MonoBehaviour
     [SerializeField] private float _maxHP = 200f;
     [SerializeField] private StageData _stageData;
 
+    private EnemySpawner _enemySpawner;
+    private Movement _movement;
+    
     private Vector3 _moveDirection = Vector3.down;
     private float _realTime;
     private float _currentHP;
 
     private bool _start = true;
     private bool _bossPhase2 = true;
+    private bool _pattern2 = true;
+    private bool _bossDie = true;
+
+
+    private void Awake()
+    {
+        _enemySpawner = GameObject.Find("Enemyspawner").GetComponent<EnemySpawner>();
+        _movement = GetComponent<Movement>();
+    }
 
     private void Start()
     {
@@ -37,6 +50,19 @@ public class Staellite_Boss : MonoBehaviour
         {
             StartCoroutine(BackAndForth());
             _bossPhase2 = false;
+        }
+
+        if (_currentHP <= _maxHP * 0.5f && _pattern2 == true)
+        {
+            StartCoroutine(BossPattern2());
+            _pattern2 = false;
+        }
+
+        if (_currentHP <= 0 && _bossDie == true)
+        {
+            StopAllCoroutines();
+            StartCoroutine(Meteor_Boss_Die());
+            _bossDie = false;
         }
     }
 
@@ -71,6 +97,38 @@ public class Staellite_Boss : MonoBehaviour
         }
     }
 
+    IEnumerator BossPattern2()
+    {
+        _enemySpawner.spawnTime = 0.5f;
+
+        Vector3 targetPosition = Vector3.zero;
+        float attRate = 0.35f;
+        StartCoroutine(BossPattern2_2());
+        while (true)
+        {
+            GameObject clone = Instantiate(_bossBullet, transform.position, Quaternion.identity);
+            Vector3 dir = (targetPosition - clone.transform.position).normalized;
+            clone.GetComponent<Movement>().MoveTo(dir);
+            yield return new WaitForSeconds(attRate);
+        }
+    }
+    IEnumerator BossPattern2_2()
+    {
+        Vector3 _dir = Vector3.right;
+        _movement.MoveTo(_dir);
+
+        while (true)
+        {
+            if (transform.position.x <= _stageData.LimitMin.x ||
+                transform.position.x >= _stageData.LimitMax.x)
+            {
+                _dir *= -1;
+                transform.position = _dir * 7.5f * Time.deltaTime;
+            }
+            yield return null;
+        }
+    }
+
 
     IEnumerator BackAndForth()
     {
@@ -85,6 +143,27 @@ public class Staellite_Boss : MonoBehaviour
                 transform.position += _dir * 5.5f * Time.deltaTime;
             }
             yield return null;
+        }
+    }
+
+    IEnumerator Meteor_Boss_Die()
+    {
+        while (true)
+        {
+            Staellite_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            Staellite_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            Staellite_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            Staellite_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            Staellite_Boss_Phase1();
+            yield return new WaitForSeconds(0.2f);
+            gameObject.GetComponent<Renderer>().material.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0 / 255f);
+            yield return new WaitForSeconds(3f);
+            SceneManager.LoadScene(8);
+            break;
         }
     }
 

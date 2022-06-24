@@ -31,7 +31,7 @@ public class Meteor_Boss : MonoBehaviour
         if (_realTime > 71)
             StopCoroutine(MoveToAppearPoint());
 
-        if (_currentHP == 0 && _bossDie == true)
+        if (_currentHP <= 0 && _bossDie == true)
         {
             StopAllCoroutines();
             StartCoroutine(Meteor_Boss_Die());
@@ -130,7 +130,7 @@ public class Meteor_Boss : MonoBehaviour
             Meteor_Boss_Phase1();
             yield return new WaitForSeconds(0.2f);
             gameObject.GetComponent<Renderer>().material.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0 / 255f);
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             SceneManager.LoadScene(7);
             break;
         }

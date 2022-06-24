@@ -6,7 +6,8 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private StageData _stageData;
     [SerializeField] private GameObject _enemy;
-    [SerializeField] private float _spawnTime;
+    
+    public float spawnTime = 0.3333333f;
 
     private void Awake()
     {
@@ -19,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
         {
             float positionX = Random.Range(_stageData.LimitMin.x, _stageData.LimitMax.x);
             Instantiate(_enemy, new Vector3(positionX, _stageData.LimitMax.y+1.0f, 0.0f), Quaternion.identity);
-            yield return new WaitForSeconds(_spawnTime);
+            yield return new WaitForSeconds(spawnTime);
         }
     }
 }
