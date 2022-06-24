@@ -82,6 +82,7 @@
     <Compile Include="Assets\01.Script\Enemy\Satellite\Satellite.cs" />
     <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShipSpawnerYL.cs" />
     <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShipSpawnerXU.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Satellite\Staellite_Boss_Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBullet : MonoBehaviour
 {
@@ -17,8 +18,11 @@ public class PlayerBullet : MonoBehaviour
         if (collision.CompareTag("Boss"))
         {
             Destroy(gameObject);
-            collision.GetComponent<Meteor_Boss>().Meteor_BossDamge(_damage);
-            collision.GetComponent<Staellite_Boss>().Staellite_BossDamge(_damage);
+
+            if(SceneManager.GetActiveScene().buildIndex == 2)
+                collision.GetComponent<Meteor_Boss>().Meteor_BossDamge(_damage);
+            if(SceneManager.GetActiveScene().buildIndex == 3)
+                collision.GetComponent<Staellite_Boss>().Staellite_BossDamge(_damage);
         }
     }
 }

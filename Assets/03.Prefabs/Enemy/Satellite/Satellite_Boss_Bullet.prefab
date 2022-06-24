@@ -12,10 +12,13 @@ GameObject:
   - component: {fileID: 8553582122348349147}
   - component: {fileID: 8553582122348349140}
   - component: {fileID: 8553582122348349141}
+  - component: {fileID: 4231065749353586727}
   - component: {fileID: 5964664251474090627}
+  - component: {fileID: 4734901754450764911}
+  - component: {fileID: 7363317579725335311}
   m_Layer: 0
   m_Name: Satellite_Boss_Bullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +117,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -141,6 +144,27 @@ PolygonCollider2D:
       - {x: 0.145, y: -0.085}
       - {x: 0.17584701, y: 0.0076390044}
       - {x: 0.145, y: 0.085}
+--- !u!50 &4231065749353586727
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8553582122348349142}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &5964664251474090627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,3 +178,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
+--- !u!114 &4734901754450764911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8553582122348349142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea51d77241eb34fab708a4768fab6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
+  _score: 100
+--- !u!114 &7363317579725335311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8553582122348349142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc284aa4821f11a47b92e95dd24ab063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 6.5
+  _moveDirection: {x: 0, y: 0, z: 0}

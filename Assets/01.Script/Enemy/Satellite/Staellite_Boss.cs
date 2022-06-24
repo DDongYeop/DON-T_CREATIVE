@@ -14,6 +14,7 @@ public class Staellite_Boss : MonoBehaviour
     private float _currentHP;
 
     private bool _start = true;
+    private bool _bossPhase2 = true;
 
     private void Start()
     {
@@ -31,6 +32,12 @@ public class Staellite_Boss : MonoBehaviour
         }
         if (_realTime > 71)
             StopCoroutine(MoveToAppearPoint());
+
+        if (_currentHP <= _maxHP * 0.75f && _bossPhase2 == true )
+        {
+            StartCoroutine(BackAndForth());
+            _bossPhase2 = false;
+        }
     }
 
     IEnumerator MoveToAppearPoint()
@@ -63,6 +70,26 @@ public class Staellite_Boss : MonoBehaviour
             yield return new WaitForSeconds(_attRate);
         }
     }
+
+
+    IEnumerator BackAndForth()
+    {
+        Vector3 _dir = Vector3.right;
+
+        while (true)
+        {
+            transform.position += _dir * 5.5f * Time.deltaTime;
+            if (transform.position.x <= _stageData.LimitMin.x + 1.4f || transform.position.x >= _stageData.LimitMax.x - 1.4f)
+            {
+                _dir *= -1;
+                transform.position += _dir * 5.5f * Time.deltaTime;
+            }
+            yield return null;
+        }
+    }
+
+
+
 
 
     #region Phase1 ÇÔ¼öµé
@@ -98,6 +125,7 @@ public class Staellite_Boss : MonoBehaviour
         if (collision.CompareTag("Player"))
             collision.GetComponent<PlayerHP>().TakeDamge(_damage);
     }
+
 
     public void Staellite_BossDamge(int damage)
     {
