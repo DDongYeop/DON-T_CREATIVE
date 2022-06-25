@@ -23,6 +23,8 @@ public class PlayerBullet : MonoBehaviour
                 collision.GetComponent<Meteor_Boss>().Meteor_BossDamge(_damage);
             if(SceneManager.GetActiveScene().buildIndex == 3)
                 collision.GetComponent<Staellite_Boss>().Staellite_BossDamge(_damage);
+            if (SceneManager.GetActiveScene().buildIndex == 4)
+                collision.GetComponent<Space_Station_Boss>().Space_Station_BossDamge(_damage);
         }
     }
 }

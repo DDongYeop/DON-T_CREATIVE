@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f41622c5fbfa04e85dd461295cf407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bossBullet: {fileID: 0}
+  _bossBullet: {fileID: 6741779561187265978, guid: cbbde5fefc7b9784caed0c40c5c00442, type: 3}
   _damage: 2
   _maxHP: 300
   _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}

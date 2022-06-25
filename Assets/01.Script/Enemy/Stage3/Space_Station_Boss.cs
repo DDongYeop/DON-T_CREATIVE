@@ -92,7 +92,7 @@ public class Space_Station_Boss : MonoBehaviour
 
         while (true)
         {
-            Staellite_Boss_Phase1();
+            SapceStationBoss_Boss_Phase1();
             yield return new WaitForSeconds(_attRate);
         }
     }
@@ -148,15 +148,15 @@ public class Space_Station_Boss : MonoBehaviour
     {
         while (true)
         {
-            Staellite_Boss_Phase1();
+            SapceStationBoss_Boss_Phase1();
             yield return new WaitForSeconds(0.2f);
-            Staellite_Boss_Phase1();
+            SapceStationBoss_Boss_Phase1();
             yield return new WaitForSeconds(0.2f);
-            Staellite_Boss_Phase1();
+            SapceStationBoss_Boss_Phase1();
             yield return new WaitForSeconds(0.2f);
-            Staellite_Boss_Phase1();
+            SapceStationBoss_Boss_Phase1();
             yield return new WaitForSeconds(0.2f);
-            Staellite_Boss_Phase1();
+            SapceStationBoss_Boss_Phase1();
             yield return new WaitForSeconds(0.2f);
             gameObject.GetComponent<Renderer>().material.color = new Color(255 / 255f, 255 / 255f, 255 / 255f, 0 / 255f);
             yield return new WaitForSeconds(3f);
@@ -176,7 +176,7 @@ public class Space_Station_Boss : MonoBehaviour
     private float _weightAngle = 0;
     #endregion
 
-    private void Staellite_Boss_Phase1()
+    private void SapceStationBoss_Boss_Phase1()
     {
         for (int i = 0; i < _count; ++i)
         {
@@ -204,7 +204,7 @@ public class Space_Station_Boss : MonoBehaviour
     }
 
 
-    public void Staellite_BossDamge(int damage)
+    public void Space_Station_BossDamge(int damage)
     {
         _currentHP -= damage;
     }
