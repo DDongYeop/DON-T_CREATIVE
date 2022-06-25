@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 85
+  controlID: 81
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 134
+  controlID: 110
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 17
+  controlID: 37
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -540,7 +540,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e6b6ffffdcb7ffff18dcffffdadcffffb2e0ffff74e1fffff0faffff
+      m_ExpandedIDs: e6faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -602,22 +602,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/99.Other
+    - Assets/06.Assets/Enemy_Boss/Stage3
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/99.Other
+  - Assets/06.Assets/Enemy_Boss/Stage3
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\kitty\Documents\GitHub\Shooting
+  m_LastProjectPath: D:\GAME_DEVELOPMENT\GitHub\Shooting
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e4450000
-    m_LastClickedID: 17892
-    m_ExpandedIDs: 000000009a4500009c4500009e450000a0450000a2450000a4450000a6450000a8450000ce4500001a4600001648000000ca9a3b
+    scrollPos: {x: 0, y: 253}
+    m_SelectedIDs: 04460000
+    m_LastClickedID: 17924
+    m_ExpandedIDs: 00000000be450000c0450000c2450000c4450000c6450000c8450000ca450000cc450000ce45000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -645,7 +645,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a4500009c4500009e450000a0450000a2450000a4450000a6450000a8450000
+    m_ExpandedIDs: 00000000be450000c0450000c2450000c4450000c6450000c8450000ca450000cc450000ce450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -672,22 +672,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 46450000bc450000c445000018180000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Space_Station_Boss
-      m_OriginalName: Space_Station_Boss
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 24602
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:

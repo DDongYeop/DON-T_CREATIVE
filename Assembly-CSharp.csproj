@@ -79,11 +79,11 @@
     <Compile Include="Assets\01.Script\PositionSwitch.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerHP.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerYR.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage3\Space_Station_Boss.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage1\Meteor.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage2\Satellite.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerYL.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerXU.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Stage3\Space_Station_Boss.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
