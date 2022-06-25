@@ -68,6 +68,7 @@
     <Compile Include="Assets\01.Script\UI\SceneChanger.cs" />
     <Compile Include="Assets\01.Script\UI\Timer.cs" />
     <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShip.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Satellite\Staellite_Boss_Bullet.cs" />
     <Compile Include="Assets\01.Script\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\01.Script\UI\TextColor.cs" />
     <Compile Include="Assets\01.Script\StageData.cs" />
@@ -82,7 +83,6 @@
     <Compile Include="Assets\01.Script\Enemy\Satellite\Satellite.cs" />
     <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShipSpawnerYL.cs" />
     <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShipSpawnerXU.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Satellite\Staellite_Boss_Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
