@@ -28,7 +28,7 @@ public class Meteor_Boss : MonoBehaviour
     {
         _realTime += Time.deltaTime;
 
-        if (_realTime > 71)
+        if (_realTime > 70)
             StopCoroutine(MoveToAppearPoint());
 
         if (_currentHP <= 0 && _bossDie == true)
@@ -62,7 +62,7 @@ public class Meteor_Boss : MonoBehaviour
                 _moveDirection = Vector3.zero;
             }
 
-            if (_realTime >= 71)
+            if (_realTime >= 70)
             {
                 StartCoroutine(BossPettern1());
                 break;

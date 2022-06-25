@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Space_Station_Boss : MonoBehaviour
 {
+    [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _bossBullet;
     [SerializeField] private int _damage = 2;
     [SerializeField] private float _maxHP = 200f;
     [SerializeField] private StageData _stageData;
 
-    private EnemySpawner _enemySpawner;
-    private EnemySpawnerY _enemySpawnerY;
     private Movement _movement;
+    private Space_Station_Boss_CircleAndGoToTargetPattern _pattern3;
 
     private Vector3 _moveDirection = Vector3.down;
     private float _realTime;
@@ -27,6 +27,7 @@ public class Space_Station_Boss : MonoBehaviour
     private void Awake()
     {
         _movement = GetComponent<Movement>();
+        _pattern3 = GetComponent<Space_Station_Boss_CircleAndGoToTargetPattern>();
     }
 
     private void Start()
@@ -43,7 +44,7 @@ public class Space_Station_Boss : MonoBehaviour
             StartCoroutine(MoveToAppearPoint());
             _start = false;
         }
-        if (_realTime > 71)
+        if (_realTime > 70)
             StopCoroutine(MoveToAppearPoint());
 
         if (_currentHP <= _maxHP * 0.75f && _bossPhase2 == true)
@@ -77,8 +78,9 @@ public class Space_Station_Boss : MonoBehaviour
                 _moveDirection = Vector3.zero;
             }
 
-            if (_realTime >= 71)
+            if (_realTime >= 70)
             {
+                StartCoroutine(BossPattern3());
                 StartCoroutine(BossPettern1());
                 break;
             }
@@ -127,6 +129,15 @@ public class Space_Station_Boss : MonoBehaviour
         }
     }
 
+    IEnumerator BossPattern3()
+    {
+        while (true)
+        {
+            _pattern3.shot();
+            yield return new WaitForSeconds(25f);
+        }
+    }
+
 
     IEnumerator BackAndForth()
     {
@@ -169,9 +180,10 @@ public class Space_Station_Boss : MonoBehaviour
 
 
 
+
     #region Phase1 ÇÔ¼öµé
     private float _attRate = 2.5f;
-    private int _count = 25;
+    private int _count = 30;
     private float _intercalAngle;
     private float _weightAngle = 0;
     #endregion

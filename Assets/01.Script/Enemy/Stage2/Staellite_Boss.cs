@@ -45,7 +45,7 @@ public class Staellite_Boss : MonoBehaviour
             StartCoroutine(MoveToAppearPoint());
             _start = false;
         }
-        if (_realTime > 71)
+        if (_realTime > 70)
             StopCoroutine(MoveToAppearPoint());
 
         if (_currentHP <= _maxHP * 0.75f && _bossPhase2 == true )
@@ -79,7 +79,7 @@ public class Staellite_Boss : MonoBehaviour
                 _moveDirection = Vector3.zero;
             }
 
-            if (_realTime >= 71)
+            if (_realTime >= 70)
             {
                 StartCoroutine(BossPettern1());
                 break;
