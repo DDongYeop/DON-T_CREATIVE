@@ -57,32 +57,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\01.Script\Movement.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Meteor\Meteor_Boss.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage1\Meteor_Boss.cs" />
     <Compile Include="Assets\01.Script\UI\ChooseESC.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerHPViewer.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerController.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Satellite\Staellite_Boss.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage2\Staellite_Boss.cs" />
     <Compile Include="Assets\01.Script\UI\PauseMenu.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerBullet.cs" />
     <Compile Include="Assets\01.Script\Enemy\EnemySpawnerY.cs" />
     <Compile Include="Assets\01.Script\UI\SceneChanger.cs" />
     <Compile Include="Assets\01.Script\UI\Timer.cs" />
-    <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShip.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Satellite\Staellite_Boss_Bullet.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShip.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage2\Staellite_Boss_Bullet.cs" />
     <Compile Include="Assets\01.Script\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\01.Script\UI\TextColor.cs" />
     <Compile Include="Assets\01.Script\StageData.cs" />
     <Compile Include="Assets\01.Script\UI\PlayerScoreViewer.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Meteor\Meteor_Boss_Bullet.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage1\Meteor_Boss_Bullet.cs" />
     <Compile Include="Assets\01.Script\PositionAutoDestroyer.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerFire.cs" />
     <Compile Include="Assets\01.Script\PositionSwitch.cs" />
     <Compile Include="Assets\01.Script\Player\PlayerHP.cs" />
-    <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShipSpawnerYR.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Meteor\Meteor.cs" />
-    <Compile Include="Assets\01.Script\Enemy\Satellite\Satellite.cs" />
-    <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShipSpawnerYL.cs" />
-    <Compile Include="Assets\01.Script\Enemy\SpaceShip\SpaceShipSpawnerXU.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerYR.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage1\Meteor.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage2\Satellite.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerYL.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerXU.cs" />
+    <Compile Include="Assets\01.Script\Enemy\Stage3\Space_Station_Boss.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
