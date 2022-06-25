@@ -11,6 +11,7 @@ public class Staellite_Boss : MonoBehaviour
     [SerializeField] private StageData _stageData;
 
     private EnemySpawner _enemySpawner;
+    private EnemySpawnerY _enemySpawnerY;
     private Movement _movement;
     
     private Vector3 _moveDirection = Vector3.down;
@@ -26,6 +27,7 @@ public class Staellite_Boss : MonoBehaviour
     private void Awake()
     {
         _enemySpawner = GameObject.Find("Enemyspawner").GetComponent<EnemySpawner>();
+        _enemySpawnerY = GameObject.Find("Enemyspawner").GetComponent<EnemySpawnerY>();
         _movement = GetComponent<Movement>();
     }
 
@@ -100,6 +102,7 @@ public class Staellite_Boss : MonoBehaviour
     IEnumerator BossPattern2()
     {
         _enemySpawner.spawnTime = 0.5f;
+        _enemySpawnerY.spawnTimeY = 5f;
 
         Vector3 targetPosition = Vector3.zero;
         float attRate = 0.35f;
