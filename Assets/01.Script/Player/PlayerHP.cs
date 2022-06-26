@@ -40,10 +40,10 @@ public class PlayerHP : MonoBehaviour
         StopCoroutine("HitColorAnimation");
         StartCoroutine("HitColorAnimation");
 
-        /*if (currentHP <= 0)
+        if (_currentHP <= 0)
         {
             _playerController.Die();
-        }*/
+        }
     }
 
     IEnumerator HitColorAnimation()

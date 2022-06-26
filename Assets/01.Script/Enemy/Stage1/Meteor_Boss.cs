@@ -171,4 +171,10 @@ public class Meteor_Boss : MonoBehaviour
             yield return null;
         }
     }
+
+    public void MeteorBossPlayer()
+    {
+        StopAllCoroutines();
+        SceneManager.LoadScene(12);
+    }
 }

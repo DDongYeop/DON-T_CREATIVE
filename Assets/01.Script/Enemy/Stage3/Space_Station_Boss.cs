@@ -220,4 +220,10 @@ public class Space_Station_Boss : MonoBehaviour
     {
         _currentHP -= damage;
     }
+
+    public void SpaceStationBossPlayer()
+    {
+        StopAllCoroutines();
+        SceneManager.LoadScene(14);
+    }
 }

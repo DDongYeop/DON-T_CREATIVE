@@ -213,4 +213,10 @@ public class Staellite_Boss : MonoBehaviour
     {
         _currentHP -= damage;
     }
+
+    public void StaelliteBossPlayer()
+    {
+        StopAllCoroutines();
+        SceneManager.LoadScene(13);
+    }
 }
