@@ -55,7 +55,6 @@
      <Compile Include="Assets\01.Script\Enemy\Stage3\Space_Station_Boss_Bullet2.cs" />
      <Compile Include="Assets\01.Script\Enemy\Stage2\Staellite_Boss.cs" />
      <Compile Include="Assets\01.Script\Player\Item\Barrier.cs" />
-     <Compile Include="Assets\01.Script\Player\Item\Damage.cs" />
      <Compile Include="Assets\01.Script\UI\PauseMenu.cs" />
      <Compile Include="Assets\01.Script\Player\PlayerBullet.cs" />
      <Compile Include="Assets\01.Script\Player\Item\BarriarScript.cs" />
@@ -79,7 +78,6 @@
      <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerYR.cs" />
      <Compile Include="Assets\01.Script\Enemy\Stage3\Space_Station_Boss.cs" />
      <Compile Include="Assets\01.Script\Player\Item\Recovery.cs" />
-     <Compile Include="Assets\01.Script\Player\Item\DamageScript.cs" />
      <Compile Include="Assets\01.Script\Enemy\Stage1\Meteor.cs" />
      <Compile Include="Assets\01.Script\Enemy\Stage2\Satellite.cs" />
      <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerYL.cs" />

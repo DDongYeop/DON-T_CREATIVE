@@ -6,6 +6,8 @@ public class SpaceShip : MonoBehaviour
 {
     [SerializeField] private float _damage = 1;
     [SerializeField] private int _score = 100;
+    [SerializeField] private GameObject _recoveryItem;
+    [SerializeField] private GameObject _barrierItem;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,7 +18,24 @@ public class SpaceShip : MonoBehaviour
             Destroy(gameObject);
         }
         if (collision.CompareTag("Playerbullet"))
+        {
             PlayerScoreViewer.score += _score;
+
+            int ItemSpawnH = Random.Range(0, 100);
+            int ItemSpawnB = Random.Range(0, 100);
+
+            if (ItemSpawnH <= 10)
+            {
+                GameObject revoveryItem = Instantiate(_recoveryItem);
+                revoveryItem.transform.position = transform.position;
+            }
+
+            if (ItemSpawnB <= 10)
+            {
+                GameObject barrierItem = Instantiate(_barrierItem);
+                barrierItem.transform.position = transform.position;
+            }
+        }
     }
 
 }

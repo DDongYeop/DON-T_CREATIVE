@@ -148,6 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 1
   _score: 100
+  _recoveryItem: {fileID: 7195492850148340675, guid: ce26bb7d5e7c03a4f9e7eb4ff9cd8bd1, type: 3}
+  _barrierItem: {fileID: 3197334098135419729, guid: fcb65b5ae1fac5a4abc5611744feb692, type: 3}
 --- !u!50 &8000119505229398799
 Rigidbody2D:
   serializedVersion: 4

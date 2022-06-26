@@ -305,6 +305,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3859931179757214022, guid: 081425c1d97817b4c802bd64fcca4961, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985058710667321665, guid: 081425c1d97817b4c802bd64fcca4961, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9085544255645886647, guid: 081425c1d97817b4c802bd64fcca4961, type: 3}
       propertyPath: m_Name
       value: Berrier
