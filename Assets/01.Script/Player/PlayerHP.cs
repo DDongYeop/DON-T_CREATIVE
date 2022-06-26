@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHP : MonoBehaviour
 {
-    [SerializeField] private float _maxHP = 10;
+    [SerializeField] private float _maxHP = 20;
 
     private SpriteRenderer _spriteRenderer;
     private PlayerController _playerController;
@@ -37,8 +37,8 @@ public class PlayerHP : MonoBehaviour
 
     private void Update()
     {
-        if (currentHP >= 10)
-            currentHP = 10;
+        if (currentHP >= 20)
+            currentHP = 20;
     }
 
 
