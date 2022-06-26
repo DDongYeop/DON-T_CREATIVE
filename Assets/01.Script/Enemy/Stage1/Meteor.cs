@@ -6,6 +6,8 @@ public class Meteor : MonoBehaviour
 {
     [SerializeField] private float _damage = 1;
     [SerializeField] private int _score = 100;
+    [SerializeField] private GameObject _recoveryItem;
+    [SerializeField] private GameObject _barrierItem;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +18,24 @@ public class Meteor : MonoBehaviour
             Destroy(gameObject);
         }
         if (collision.CompareTag("Playerbullet"))
+        {
             PlayerScoreViewer.score += _score;
+
+            int ItemSpawnH = Random.Range(0, 100);
+            int ItemSpawnB = Random.Range(0, 100);
+            int ItemSpawnD = Random.Range(0, 100);
+
+            if (ItemSpawnH <= 7)
+            {
+                GameObject revoveryItem = Instantiate(_recoveryItem);
+                revoveryItem.transform.position = transform.position;
+            }
+
+            if (ItemSpawnB <= 7)
+            {
+                GameObject barrierItem = Instantiate(_barrierItem);
+                barrierItem.transform.position = transform.position;
+            }
+        }   
     }
 }

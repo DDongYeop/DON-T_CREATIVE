@@ -71,6 +71,7 @@
     <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShip.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage2\Staellite_Boss_Bullet.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage3\Space_Station_Boss_CircleAndGoToTargetPattern.cs" />
+    <Compile Include="Assets\01.Script\Player\Berrier.cs" />
     <Compile Include="Assets\01.Script\Enemy\EnemySpawner.cs" />
     <Compile Include="Assets\01.Script\UI\TextColor.cs" />
     <Compile Include="Assets\01.Script\StageData.cs" />
@@ -87,6 +88,9 @@
     <Compile Include="Assets\01.Script\Enemy\Stage2\Satellite.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerYL.cs" />
     <Compile Include="Assets\01.Script\Enemy\Stage3\SpaceShipSpawnerXU.cs" />
+    <Compile Include="Assets\01.Script\Player\Item\Recovery.cs" />
+    <Compile Include="Assets\01.Script\Player\Item\Barrier.cs" />
+    <Compile Include="Assets\01.Script\Player\BarriarScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
