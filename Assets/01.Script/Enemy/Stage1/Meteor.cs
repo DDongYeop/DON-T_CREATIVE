@@ -8,6 +8,7 @@ public class Meteor : MonoBehaviour
     [SerializeField] private int _score = 100;
     [SerializeField] private GameObject _recoveryItem;
     [SerializeField] private GameObject _barrierItem;
+    [SerializeField] private GameObject _damageI;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,6 +36,12 @@ public class Meteor : MonoBehaviour
             {
                 GameObject barrierItem = Instantiate(_barrierItem);
                 barrierItem.transform.position = transform.position;
+            }
+
+            if (ItemSpawnD <= 7)
+            {
+                GameObject damageItem = Instantiate(_damageI);
+                damageItem.transform.position = transform.position;
             }
         }   
     }

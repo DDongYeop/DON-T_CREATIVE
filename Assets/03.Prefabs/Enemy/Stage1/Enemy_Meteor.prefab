@@ -187,3 +187,4 @@ MonoBehaviour:
   _score: 100
   _recoveryItem: {fileID: 7195492850148340675, guid: ce26bb7d5e7c03a4f9e7eb4ff9cd8bd1, type: 3}
   _barrierItem: {fileID: 3197334098135419729, guid: fcb65b5ae1fac5a4abc5611744feb692, type: 3}
+  _damageI: {fileID: 2605472259693536394, guid: 530b2381afe40944b917bae0e2095492, type: 3}
