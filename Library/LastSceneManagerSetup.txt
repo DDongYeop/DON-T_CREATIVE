@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/00.Scenes/GameOver/Stage3GameOver.unity
+- path: Assets/00.Scenes/TitleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
