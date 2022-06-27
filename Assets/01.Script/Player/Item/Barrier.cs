@@ -8,10 +8,12 @@ public class Barrier : MonoBehaviour
     [SerializeField] private GameObject _barriar;
 
     private BarriarScript _barriarScript;
+    private ObjectPooler _pooler;
 
     private void Awake()
     {
         _barriarScript = GameObject.Find("Berrier").GetComponent<BarriarScript>();
+        _pooler = GetComponent<ObjectPooler>();
 
     }
 
@@ -20,7 +22,7 @@ public class Barrier : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _barriarScript.BarriarScriptStart();
-            Destroy(gameObject);
+            _pooler.ReturnObject(gameObject);
         }
     }
 }

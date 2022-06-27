@@ -5,21 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class PlayerBullet : MonoBehaviour
 {
+    private ObjectPooler _pooler;
+
     public int _damage = 1;
+
+    private void Awake()
+    {
+        _pooler = GameObject.Find("SpaceShipSpawner").GetComponent<ObjectPooler>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            Destroy(collision.gameObject);
         }
 
         if (collision.CompareTag("Boss"))
         {
-            Destroy(gameObject);
+            _pooler.ReturnObject(gameObject);
 
-            if(SceneManager.GetActiveScene().buildIndex == 2)
+            if (SceneManager.GetActiveScene().buildIndex == 2)
                 collision.GetComponent<Meteor_Boss>().Meteor_BossDamge(_damage);
             if(SceneManager.GetActiveScene().buildIndex == 3)
                 collision.GetComponent<Staellite_Boss>().Staellite_BossDamge(_damage);

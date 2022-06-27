@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PositionAutoDestroyer : MonoBehaviour
 {
@@ -8,12 +9,16 @@ public class PositionAutoDestroyer : MonoBehaviour
     private float _destroyWeight = 2.0f;
 
     //ObjectPooler bulletPooler;
-    //ObjectPooler enemyPooler;
+    ObjectPooler _pooler;
 
     private void Start()
     {
         //bulletPooler = GameObject.FindGameObjectWithTag("Player").GetComponent<ObjectPooler>();
         //enemyPooler = GameObject.Find("EnemySpawner").GetComponent<ObjectPooler>();
+        if(SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            _pooler = GameObject.Find("SpaceShipSpawner").GetComponent<ObjectPooler>();
+        }
     }
     void LateUpdate()
     {
@@ -29,8 +34,9 @@ public class PositionAutoDestroyer : MonoBehaviour
             }
             else if (gameObject.CompareTag("Enemy"))
             {
-                //enemyPooler.ReturnObject(gameObject);
-                Destroy(gameObject);
+                if(GameObject.Find("SpaceShip(Clone)"))
+                    _pooler.ReturnObject(gameObject);
+                //Destroy(gameObject);
             }
             else
             {
