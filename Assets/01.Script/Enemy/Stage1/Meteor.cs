@@ -35,6 +35,7 @@ public class Meteor : MonoBehaviour
                 GameObject barrierItem = Instantiate(_barrierItem);
                 barrierItem.transform.position = transform.position;
             }
+            Destroy(gameObject);
         }   
     }
 }

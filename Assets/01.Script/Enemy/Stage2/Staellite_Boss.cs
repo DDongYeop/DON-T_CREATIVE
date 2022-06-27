@@ -40,12 +40,12 @@ public class Staellite_Boss : MonoBehaviour
     {
         _realTime += Time.deltaTime;
 
-        if (_realTime >= 66 && _start == true)
+        if (_realTime >= 36 && _start == true)
         {
             StartCoroutine(MoveToAppearPoint());
             _start = false;
         }
-        if (_realTime > 70)
+        if (_realTime > 40)
             StopCoroutine(MoveToAppearPoint());
 
         if (_currentHP <= _maxHP * 0.75f && _bossPhase2 == true )

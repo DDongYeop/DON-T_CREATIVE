@@ -9,23 +9,18 @@ public class SpaceShip : MonoBehaviour
     [SerializeField] private GameObject _recoveryItem;
     [SerializeField] private GameObject _barrierItem;
 
-    ObjectPooler _pooler;
 
-    private void Awake()
-    {
-        _pooler = GameObject.Find("SpaceShipSpawner").GetComponent<ObjectPooler>();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerHP>().TakeDamge(_damage);
-            _pooler.ReturnObject(gameObject);
+            Destroy(gameObject);
         }
         if (collision.CompareTag("Playerbullet"))
         {
-            _pooler.ReturnObject(gameObject);
+            Destroy(gameObject);
         }
         if (collision.CompareTag("Playerbullet"))
         {
@@ -45,6 +40,7 @@ public class SpaceShip : MonoBehaviour
                 GameObject barrierItem = Instantiate(_barrierItem);
                 barrierItem.transform.position = transform.position;
             }
+            Destroy(gameObject);
         }
     }
 

@@ -22,6 +22,9 @@ public class Space_Station_Boss_CircleAndGoToTargetPattern : MonoBehaviour
                 //5초후 삭제
                 Destroy(temp, 5f);
 
+               //총알 생성 위치를 (0,0) 좌표로 한다.
+                temp.transform.position = new Vector2 (this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+
                 //?초후에 Target에게 날아갈 오브젝트 수록
                 bl.Add(temp.transform);
 

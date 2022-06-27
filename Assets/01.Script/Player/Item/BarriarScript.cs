@@ -23,6 +23,11 @@ public class BarriarScript : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        if (collision.CompareTag("EnemyBullet"))
+        {
+            Destroy(gameObject);
+        }
+
         if (collision.CompareTag("Boss"))
         {
             if (SceneManager.GetActiveScene().buildIndex == 2)

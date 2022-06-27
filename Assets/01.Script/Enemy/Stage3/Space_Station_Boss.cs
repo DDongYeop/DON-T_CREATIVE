@@ -26,6 +26,7 @@ public class Space_Station_Boss : MonoBehaviour
 
     private void Awake()
     {
+        StopAllCoroutines();
         _movement = GetComponent<Movement>();
         _pattern3 = GetComponent<Space_Station_Boss_CircleAndGoToTargetPattern>();
     }
@@ -39,12 +40,12 @@ public class Space_Station_Boss : MonoBehaviour
     {
         _realTime += Time.deltaTime;
 
-        if (_realTime >= 66 && _start == true)
+        if (_realTime >= 36 && _start == true)
         {
             StartCoroutine(MoveToAppearPoint());
             _start = false;
         }
-        if (_realTime > 70)
+        if (_realTime > 40)
             StopCoroutine(MoveToAppearPoint());
 
         if (_currentHP <= _maxHP * 0.75f && _bossPhase2 == true)
@@ -78,7 +79,7 @@ public class Space_Station_Boss : MonoBehaviour
                 _moveDirection = Vector3.zero;
             }
 
-            if (_realTime >= 70)
+            if (_realTime >= 40)
             {
                 StartCoroutine(BossPattern3());
                 StartCoroutine(BossPettern1());
@@ -183,7 +184,7 @@ public class Space_Station_Boss : MonoBehaviour
 
     #region Phase1 ÇÔ¼öµé
     private float _attRate = 2.5f;
-    private int _count = 30;
+    private int _count = 25;
     private float _intercalAngle;
     private float _weightAngle = 0;
     #endregion

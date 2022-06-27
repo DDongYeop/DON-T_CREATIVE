@@ -574,6 +574,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1672605059, guid: a02f27d980ac9cc469d78006905d7c44, type: 3}
+      propertyPath: _maxHP
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4471758594953673385, guid: a02f27d980ac9cc469d78006905d7c44, type: 3}
       propertyPath: _moveSpeed
       value: 7
@@ -1092,40 +1096,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.59347963, y: 0.19508001}
-      - {x: 0.13109998, y: 0.20167997}
-      - {x: 0.11770005, y: 0.2571199}
-      - {x: 0.42135993, y: 0.2571199}
-      - {x: 0.41141525, y: 0.40315297}
-      - {x: 0.18935353, y: 0.41189614}
-      - {x: 0.16554359, y: 0.38178298}
-      - {x: 0.15695792, y: 0.4751761}
-      - {x: -0.16853566, y: 0.4785242}
-      - {x: -0.16760871, y: 0.38208985}
-      - {x: -0.104432136, y: 0.20951006}
-      - {x: -0.59258306, y: 0.20541188}
-      - {x: -0.5868818, y: -0.00538972}
-      - {x: -0.23167074, y: -0.006703675}
-      - {x: -0.23986666, y: -0.18400893}
-      - {x: -0.052587025, y: -0.47344837}
-      - {x: 0.05708766, y: -0.4734231}
-      - {x: 0.23646027, y: -0.1783199}
-      - {x: 0.25070024, y: -0.004019797}
-      - {x: 0.59094, y: 0.0028402507}
-    - - {x: -0.53, y: 0.42}
-      - {x: -0.53999996, y: 0.39}
-      - {x: -0.53999996, y: 0.25}
-      - {x: -0.45, y: 0.25}
-      - {x: -0.1641002, y: 0.25686005}
-      - {x: -0.18724015, y: 0.42}
-    - - {x: 0.45999998, y: 0.42}
-      - {x: 0.42999998, y: 0.39}
-      - {x: 0.43731984, y: 0.26090243}
-      - {x: 0.45999998, y: 0.25}
-      - {x: 0.5, y: 0.25}
-      - {x: 0.53, y: 0.28}
-      - {x: 0.53, y: 0.39}
-      - {x: 0.5, y: 0.42}
+    - - {x: -0.31440145, y: -0.021145746}
+      - {x: -0.04307373, y: -0.48939973}
+      - {x: 0.06536705, y: -0.4861887}
+      - {x: 0.2914683, y: -0.0337286}
+      - {x: 0.5800711, y: -0.015990734}
+      - {x: 0.5901745, y: 0.46700615}
+      - {x: -0.59776974, y: 0.48181683}
+      - {x: -0.589089, y: -0.01725857}
 --- !u!50 &1388568835
 Rigidbody2D:
   serializedVersion: 4
@@ -1322,7 +1300,6 @@ GameObject:
   - component: {fileID: 1883469154}
   - component: {fileID: 1883469152}
   - component: {fileID: 1883469155}
-  - component: {fileID: 1883469156}
   m_Layer: 0
   m_Name: SpaceShipSpawner
   m_TagString: Untagged
@@ -1389,20 +1366,6 @@ MonoBehaviour:
   _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
   _enemy: {fileID: 2916855601765840038, guid: 20256e62225a26d49b56c2542d820ce4, type: 3}
   _spawnTime: 0.3
---- !u!114 &1883469156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883469151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc22edc00584474b8b56682dbe385df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefab: {fileID: 2916855601765840038, guid: 20256e62225a26d49b56c2542d820ce4, type: 3}
-  _poolSize: 7
 --- !u!1001 &1938529370
 PrefabInstance:
   m_ObjectHideFlags: 0

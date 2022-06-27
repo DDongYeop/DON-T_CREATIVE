@@ -31,7 +31,6 @@ public class Space_Station_Boss_Bullet2 : MonoBehaviour
         {
             PlayerScoreViewer.score += _score;
             Destroy(gameObject);
-            Destroy(collision.gameObject);
         }
     }
 }
