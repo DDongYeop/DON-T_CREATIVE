@@ -14,30 +14,30 @@ public class Space_Station_Boss_CircleAndGoToTargetPattern : MonoBehaviour
         //Target방향으로 발사될 오브젝트 수록
         var bl = new List<Transform>();
 
-            for (int i = 0; i < 360; i += 13)
-            {
-                //총알 생성
-                var temp = Instantiate(_bullet);
+        for (int i = 0; i < 360; i += 13)
+        {
+            //총알 생성
+            var temp = Instantiate(_bullet);
 
-                //5초후 삭제
-                Destroy(temp, 5f);
+            //2초후 삭제
+            Destroy(temp, 5f);
 
-               //총알 생성 위치를 (0,0) 좌표로 한다.
-                temp.transform.position = new Vector2 (this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+            //총알 생성 위치를 (0,0) 좌표로 한다.
+            //temp.transform.position = Vector2.zero;
+            
+            Vector2 positionsBullet = new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+            //?초후에 Target에게 날아갈 오브젝트 수록
+            bl.Add(temp.transform);
 
-                //?초후에 Target에게 날아갈 오브젝트 수록
-                bl.Add(temp.transform);
-
-                //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
-                temp.transform.rotation = Quaternion.Euler(0, 0, i);
-            }
-            //총알을 Target 방향으로 이동시킨다.
-            StartCoroutine(BulletToTarget(bl));
+            //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
+            temp.transform.rotation = Quaternion.Euler(0, 0, i);
+        }
+        //총알을 Target 방향으로 이동시킨다.
+        StartCoroutine(BulletToTarget(bl));
     }
 
     IEnumerator BulletToTarget(List<Transform> bl)
     {
-        //0.5초 후에 시작
         yield return new WaitForSeconds(0.5f);
 
         for (int i = 0; i < bl.Count; i++)

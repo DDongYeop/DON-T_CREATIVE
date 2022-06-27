@@ -18,7 +18,6 @@ public class Space_Station_Boss_Bulelt : MonoBehaviour
         {
             PlayerScoreViewer.score += _score;
             Destroy(gameObject);
-            Destroy(collision.gameObject);
         }
     }
 }

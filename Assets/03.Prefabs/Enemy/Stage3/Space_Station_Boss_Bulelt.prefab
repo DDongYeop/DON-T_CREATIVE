@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6741779561187265976}
   - component: {fileID: 5346094704702574048}
   - component: {fileID: 4684328502595934366}
+  - component: {fileID: 5613811026636131879}
   m_Layer: 0
   m_Name: Space_Station_Boss_Bulelt
   m_TagString: EnemyBullet
@@ -117,7 +118,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -132,23 +133,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.089999996, y: 0.14}
-      - {x: -0.14999999, y: 0.08}
-      - {x: -0.14999999, y: -0.08}
-      - {x: -0.089999996, y: -0.14}
-      - {x: 0.089999996, y: -0.14}
-      - {x: 0.14999999, y: -0.08}
-      - {x: 0.14999999, y: 0.08}
-      - {x: 0.089999996, y: 0.14}
-    - - {x: -0.04, y: -0.03}
-      - {x: -0.049999997, y: 0.01}
-      - {x: -0.02, y: 0.04}
-      - {x: 0.01, y: 0.049999997}
-      - {x: 0.04, y: 0.02}
-      - {x: 0.049999997, y: -0.01}
-      - {x: 0.02, y: -0.04}
-      - {x: -0.01, y: -0.049999997}
-      - {x: -0.02, y: -0.04}
+    - - {x: -0.14645697, y: 0.064464524}
+      - {x: -0.1455939, y: -0.061012343}
+      - {x: -0.07229497, y: -0.13783777}
+      - {x: 0.07672615, y: -0.13610001}
+      - {x: 0.14732005, y: -0.065178454}
+      - {x: 0.14982411, y: 0.055592895}
+      - {x: 0.07136923, y: 0.13904613}
+      - {x: -0.071009316, y: 0.14300461}
 --- !u!114 &5346094704702574048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,3 +168,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 7.5
   _moveDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &5613811026636131879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741779561187265978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59423ba9bd3f7524997c41fa5def1bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
+  _score: 100

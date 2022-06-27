@@ -25,7 +25,7 @@ public class BarriarScript : MonoBehaviour
 
         if (collision.CompareTag("EnemyBullet"))
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
 
         if (collision.CompareTag("Boss"))

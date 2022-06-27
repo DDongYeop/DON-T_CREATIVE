@@ -1140,7 +1140,7 @@ MonoBehaviour:
   _player: {fileID: 1187918185}
   _bossBullet: {fileID: 6741779561187265978, guid: cbbde5fefc7b9784caed0c40c5c00442, type: 3}
   _damage: 2
-  _maxHP: 300
+  _maxHP: 400
   _stageData: {fileID: 11400000, guid: 25a054cafccbdd14781a37a6ec1ac962, type: 2}
 --- !u!114 &1388568837
 MonoBehaviour:

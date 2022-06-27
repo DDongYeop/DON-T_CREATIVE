@@ -28,7 +28,7 @@ public class Meteor_Boss : MonoBehaviour
     {
         _realTime += Time.deltaTime;
 
-        if (_realTime > 40)
+        if (_realTime > 48)
             StopCoroutine(MoveToAppearPoint());
 
         if (_currentHP <= 0 && _bossDie == true)
@@ -62,7 +62,7 @@ public class Meteor_Boss : MonoBehaviour
                 _moveDirection = Vector3.zero;
             }
 
-            if (_realTime >= 70)
+            if (_realTime >= 38)
             {
                 StartCoroutine(BossPettern1());
                 break;
@@ -84,7 +84,7 @@ public class Meteor_Boss : MonoBehaviour
 
 #region Phase1 ÇÔ¼öµé
     private float _attRate = 3f;
-    private int _count = 20;
+    private int _count = 25;
     private float _intercalAngle;
     private float _weightAngle = 0;
 #endregion

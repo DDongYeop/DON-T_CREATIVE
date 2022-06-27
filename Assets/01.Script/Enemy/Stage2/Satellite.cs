@@ -24,13 +24,13 @@ public class Satellite : MonoBehaviour
             int ItemSpawnH = Random.Range(0, 100);
             int ItemSpawnB = Random.Range(0, 100);
 
-            if (ItemSpawnH <= 10)
+            if (ItemSpawnH <= 7)
             {
                 GameObject revoveryItem = Instantiate(_recoveryItem);
                 revoveryItem.transform.position = transform.position;
             }
 
-            if (ItemSpawnB <= 10)
+            if (ItemSpawnB <= 7)
             {
                 GameObject barrierItem = Instantiate(_barrierItem);
                 barrierItem.transform.position = transform.position;

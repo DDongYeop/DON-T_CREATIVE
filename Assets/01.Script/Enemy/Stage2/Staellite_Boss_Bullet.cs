@@ -18,7 +18,6 @@ public class Staellite_Boss_Bullet : MonoBehaviour
         {
             PlayerScoreViewer.score += _score;
             Destroy(gameObject);
-            Destroy(collision.gameObject);
         }
     }
 }

@@ -8,7 +8,7 @@ public class Space_Station_Boss : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _bossBullet;
     [SerializeField] private int _damage = 2;
-    [SerializeField] private float _maxHP = 200f;
+    [SerializeField] private float _maxHP = 400f;
     [SerializeField] private StageData _stageData;
 
     private Movement _movement;
@@ -79,7 +79,7 @@ public class Space_Station_Boss : MonoBehaviour
                 _moveDirection = Vector3.zero;
             }
 
-            if (_realTime >= 40)
+            if (_realTime >= 38)
             {
                 StartCoroutine(BossPattern3());
                 StartCoroutine(BossPettern1());
@@ -183,8 +183,8 @@ public class Space_Station_Boss : MonoBehaviour
 
 
     #region Phase1 ÇÔ¼öµé
-    private float _attRate = 2.5f;
-    private int _count = 25;
+    private float _attRate = 2f;
+    private int _count = 35;
     private float _intercalAngle;
     private float _weightAngle = 0;
     #endregion
