@@ -39,11 +39,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -1768,4 +1765,4 @@ ScriptsOnlyBuild:
   - Assets/00.Scenes/GameOver/Stage3GameOver.unity
   - Assets/00.Scenes/GameOver/Stage4GameOver.unity
   - Assets/00.Scenes/GameOver/Stage5GameOver.unity
-  playerPath: C:/Users/user/Desktop/DON'T CREATIVE/DON'T CREATIVE.exe
+  playerPath: C:/Users/user/Desktop/DON'T CREATEVE/DON'T CREATIVE.exe
