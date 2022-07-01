@@ -20,9 +20,9 @@
     >##### 우선 30초간 버티고 보스가 나오면 공격하여 죽이면 되는 간단한 게임입니다 
 
 ## 5. 캡쳐
-  ![Imgae1](https://user-images.githubusercontent.com/100222624/176907501-986b89c5-0f28-43e5-a7f0-90e41e58accb.png)
-  ![Image2](https://user-images.githubusercontent.com/100222624/176907506-e6e8f61f-f531-4965-95a0-c5e9f3757227.PNG)
-  ![Image3](https://user-images.githubusercontent.com/100222624/176907508-d037b4fe-dfd7-4723-aeef-6325b2f9baae.png)
+  >![Imgae1](https://user-images.githubusercontent.com/100222624/176907501-986b89c5-0f28-43e5-a7f0-90e41e58accb.png)
+  >![Image2](https://user-images.githubusercontent.com/100222624/176907506-e6e8f61f-f531-4965-95a0-c5e9f3757227.PNG)
+  >![Image3](https://user-images.githubusercontent.com/100222624/176907508-d037b4fe-dfd7-4723-aeef-6325b2f9baae.png)
 
 ## 5. 다운로드 
   >##### 빌드본을 받아보고 싶으시다면 [여기][Download]를 눌러주세요 !
