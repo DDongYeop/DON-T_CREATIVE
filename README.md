@@ -27,11 +27,10 @@
   >![Image3](https://user-images.githubusercontent.com/100222624/176907508-d037b4fe-dfd7-4723-aeef-6325b2f9baae.png)
 
 ## 5. 다운로드 
-  >##### 빌드본을 받아보고 싶으시다면 [여기][Download]를 눌러주세요 !
+  >##### 빌드본을 받아보고 싶으시다면 [여기](https://drive.google.com/file/d/1Dy77sc_vRCrwLHtDppGD1K8F0ccVvJ70/view?usp=sharing, "다운 할 수 있는 구글 드라이브로 이동됩니다")를 눌러주세요 !
 ---
 
 ## P.S.
   >##### 제가 처음으로 만든 게임입니다 
   >##### 폰트와 사운드를 제외한 모든 에셋은 제가 제작했습니다
-
 
