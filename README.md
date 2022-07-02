@@ -26,8 +26,9 @@
   >![Image2](https://user-images.githubusercontent.com/100222624/176907506-e6e8f61f-f531-4965-95a0-c5e9f3757227.PNG)
   >![Image3](https://user-images.githubusercontent.com/100222624/176907508-d037b4fe-dfd7-4723-aeef-6325b2f9baae.png)
 
-## 5. 다운로드 
-  >##### 빌드본을 받아보고 싶으시다면 [여기](https://drive.google.com/file/d/1Dy77sc_vRCrwLHtDppGD1K8F0ccVvJ70/view?usp=sharing, "다운 할 수 있는 구글 드라이브로 이동됩니다")를 눌러주세요 !
+## 5. 플레이영상 및 다운로드
+  >##### 플레이 영상을 보고 싶으시다면 [여기](https://www.youtube.com/watch?v=ZNe-Jy6B-IE, "제 유튜브에 올라가있는 영상으로 이동 됩니다")를 눌러주시고, 
+  >##### 빌드본을 받아보고 싶으시다면 [여기](https://drive.google.com/file/d/1x5BhMyVzEhXigSTCYcr2fSTHFsBsiC_J/view?usp=sharing, "다운 할 수 있는 구글 드라이브로 이동됩니다")를 눌러주세요 !
 ---
 
 ## P.S.
